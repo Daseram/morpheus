@@ -1,0 +1,45 @@
+select, input {
+    padding: 7px 15px;
+    border-radius: 3px;
+    border-color: #e9e9e9;
+    background-color: #fafafa;
+    outline: none;
+    transition: .1s;
+    box-shadow: 0 0 0 1pt grey;
+    min-width: 200px;
+    margin-right: 20px;
+    max-height: 35px;
+}
+
+select:focus, input:focus {
+    box-shadow: 0 0 3pt 2pt cornflowerblue;
+}
+
+.rules-option {
+    margin: 15px 0PX;
+    display: flex;
+    align-items: baseline;
+}
+
+.delete-rule {
+    display: inline;
+    cursor: pointer;
+}
+
+.custom-option, .rule-url {
+    display: flex;
+}
+
+.rule-url {
+    flex-direction: column;
+}
+
+.error {
+    border: solid 0.5px #cc0000;
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin-top: 3px;
+    margin-right: 17px;
+    color: #cc0000;
+    background-color: #ffb2b2;
+}

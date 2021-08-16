@@ -1,0 +1,25 @@
+
+<div class="rules-option">
+    <select [(ngModel)]="selectedRule">
+        <option [ngValue]="option.id" *ngFor="let option of rulesOptions">
+        {{option.name}}
+        </option>
+    </select>
+    <div class="custom-option" *ngIf="selectedRule === 5">
+        <select>
+            <option [ngValue]="option.id" *ngFor="let option of customOptions">
+                {{option.name}}
+            </option>
+        </select>
+        <div class="rule-url">
+            <input type="text" [(ngModel)]="urlRule" (blur)="validateUrl()">
+            <div class="error" *ngIf="invalidUrl">
+                URL is Missing
+            </div>
+        </div>        
+    </div>
+    <div class="delete-rule" (mouseover)="hoverDelete=true" (mouseout)="hoverDelete=false" (click)="deleteSelectedRule()">
+        <span *ngIf="!hoverDelete" class="delete">&#x2716;</span>
+        <span *ngIf="hoverDelete"class="delete">&#10060;</span>
+    </div>    
+</div>    
