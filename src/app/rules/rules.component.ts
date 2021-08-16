@@ -17,7 +17,7 @@ export class RulesComponent implements OnInit {
 
   @Input() rulesOptions: CustomOption[];
 
-  @Input() selectedRule: Rule;
+  @Input() selectedRule: number;
 
   @Input() customOptions: CustomOption[];
 
